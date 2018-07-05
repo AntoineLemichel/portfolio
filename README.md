@@ -8,7 +8,7 @@ It's my portfolio
 - [ ] Make wireframe
 - [ ] Structured html
 - [ ] Semantics html correctly
-- [ ] Adding french and anglais translate
+- [ ] Adding french and english translate
 
 
 ## README is in progress working
