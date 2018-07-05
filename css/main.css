@@ -97,6 +97,93 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Basics style */
+/* Remove basics margin and padding, on all of pages */
+body, html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+/* Too again, remove margin and padding, on alla of pages for tag nav */
+nav {
+    margin-top: 0;
+    padding-top: 0;
+}
+/* there are a margin on list, now with this style, marge and padding-left are been removed */
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+/* With this style, remove list style and increase font-size */
+ul li {
+    list-style: none;
+    font-size: 1.6rem;
+}
+/* Remove a underline on link, and adding color for font */
+ul li a {
+    text-decoration: none;
+    color: #404040;
+}
+/* This style, manages if there are an cursor on the link */
+ul li a:hover {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(#404040 , #BEBEBE) 10;
+}
+header h1 {
+    align-self: center;
+}
+/* Manages wallpaper full-screen */
+.bg {
+    background: url("../img/wallpaper.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Remove link for mobile version */
+.hidden-mobile a{
+    display: none;
+}
+/* Manages, all of items into web pages, excluding on header  */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* This style, manages menu icon and icon return top */
+.menu ul li i {
+    font-size: 2.5rem;
+    color: #413b3b;
+}
+.return-top { 
+    margin: 0 30px 0 0;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.return-top a {
+   font-size: 4rem;
+   color: #413b3b;
+}
+/* The end of the style that manages menu icon and icon return top */
+
+/* Manages the menu, position on screen, colors and display*/
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+.menu ul{
+    margin-top: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+.menu ul li {
+    display: inline-block;
+    padding: 5px;
+}
+/* The end of the style that manage menu, position on screen, colors and display, all of on the menu */
 
 
 
@@ -106,13 +193,19 @@ textarea {
 
 
 
+/* This a test with media queries  */
 
-
-
-
-
-
-
+@media (min-width: 750px){
+    .hidden-mobile a {
+        display: inline;
+    }
+    .menu ul {
+        left: 30px;
+    }
+    .hidden-desktop i{
+        display: none;
+    }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
