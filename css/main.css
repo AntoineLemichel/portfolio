@@ -166,9 +166,10 @@ ul li a {
 }
 .menu ul{
     margin-top: auto;
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     left: -15px;
+    z-index: 1;
 }
 .menu ul li {
     display: inline-block;
@@ -194,7 +195,7 @@ h2:after {
     height: 2px;
     position: relative;
     vertical-align: middle;
-    width: 70%;
+    width: 60%;
 }
 h2:before {
     right: 0.5em;
@@ -204,31 +205,25 @@ h2:after {
     left: 0.5em;
     margin-right: -50%;
 }
-.aboutMe {
+.right, .left{
     display: flex;
     flex-direction: column;
 }
-.right {
-    width: 50%;
-    text-align: right;
+.right p{
+    width: 70%;
     align-self: flex-end;
-    margin-right: 2%;
-    min-width: 320px;
+    min-width: 250px;
+    margin: auto;
 }
-.left {
-    width: 50%;
-    text-align: left;
-    margin-left: 2%;
-    min-width: 320px;
+.left p{
+    width: 70%;
+    min-width: 250px;
+    margin: auto;
 }
 
 
 
 /* Manage, div to portfolio, responsive for all devices */
-.portfolio {
-    display: flex;
-    flex-direction: column;
-}
 .portfolio-detail {
     max-width: 900px;
 }
@@ -247,18 +242,70 @@ h2:after {
     margin-bottom: 5%;
 }
 .portfolio-techno span, .portfolio-link a {
-    margin: 0 auto;
+    display: inline-flex;
+    margin:0 auto;
     background: #A63446;
     color: #fff;
-    border-radius: 7px;
+    border-radius: 5px;
     padding: 10px;
     text-align: left;
     text-decoration: none;
+    margin: 0 0 2% 0;
 }
 .portfolio-link, .portfolio-techno {
     display: inline-block;
     font-size: 1.1rem;
 }
+.portfolio-bottom {
+    text-align: center;
+
+}
+.contact {
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin: 0 0 5% 0;
+
+}
+.contact input , textarea{
+    border: none;
+    background: #2E2E3A;
+    padding: 8px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+}
+.contact textarea {
+    width: 80%;
+}
+.contact input:focus, textarea:focus {
+    border-top: 5px solid #A63446;
+    border-bottom: 5px solid #A63446;
+}
+.contact strong {
+    color: #A63446;
+    text-decoration: underline;
+}
+
+footer {
+    background: #2E2E3A;
+}
+footer ul li {
+    display: flex;
+    justify-content: center;
+}
+footer ul li a {
+    color: #fff;
+    background: #A63446;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+}
+footer ul li a:hover {
+    background: #DB504A;
+}
+
 
 
 
@@ -283,6 +330,7 @@ h2:after {
     }
     .menu ul {
         left: 30px;
+        position: absolute;
     }
     .hidden-desktop i{
         display: none;
@@ -298,6 +346,20 @@ h2:after {
     .portfolio-link, .portfolio-techno {
         margin: auto;
         margin-bottom: auto;
+    }
+    .right p{
+        text-align: right;
+        margin: 0;
+        margin: 0 1% 1% 0;
+    }
+    .left p{
+        margin: 0;
+        text-align: left;
+        margin: 1% 0 0 1%;
+
+    }
+    .portfolio-techno span:hover, .portfolio-link a:hover{
+        background: #DB504A;
     }
 }
 @media (min-width: 1400px) {
