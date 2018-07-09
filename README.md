@@ -8,6 +8,12 @@ It's my portfolio
 - [ ] Make wireframe
 - [ ] Structured html
 - [ ] Semantics html correctly
+- [ ] Security to web server
+- 
 
+## Structure HTML
+- [X] Adding pictures into index
+- [X] Picture for all devices
+- [ ] Adding my production, contact, about me
 
 ## README is in progress working
