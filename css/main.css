@@ -122,14 +122,14 @@ ul li {
 /* Remove a underline on link, and adding color for font */
 ul li a {
     text-decoration: none;
-    color: #AA767C;
+    color: #DE9151;
 }
 /* Manages wallpaper full-screen */
 .bg {
-    background: url("../img/wallpaper-640.jpg") no-repeat center center fixed;
+    background: url("../img/wallpaper-640.jpg")no-repeat center center fixed;
     background-size: cover;
-    min-height: 100vh;
-    min-width: 100vh;
+    min-height: 100%;
+    background-position: 0% 0%;
 }
 /* Remove link for mobile version */
 .hidden-mobile a{
@@ -144,7 +144,7 @@ ul li a {
 /* This style, manages menu icon and icon return top */
 .menu ul li i {
     font-size: 2.5rem;
-    color: #AA767C;
+    color: #DE9151;
 }
 .return-top { 
     margin: 0 30px 0 0;
@@ -155,7 +155,7 @@ ul li a {
 }
 .return-top a {
    font-size: 3rem;
-   color: #AA767C;
+   color: #F99E5F;
 }
 /* The end of the style that manages menu icon and icon return top */
 
@@ -168,7 +168,7 @@ ul li a {
     margin-top: auto;
     position: absolute;
     bottom: 10px;
-    left: 0;
+    left: -15px;
 }
 .menu ul li {
     display: inline-block;
@@ -181,7 +181,84 @@ ul li a {
     top: 10px;
     right: 10px;
 }
+h2 {
+    overflow: hidden;
+    text-align: left;
+    color: #DB504A;
+}
+h2:before,
+h2:after {
+    background-color: #2E2E3A;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 70%;
+}
+h2:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+h2:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+}
+.right {
+    width: 50%;
+    text-align: right;
+    align-self: flex-end;
+    margin-right: 2%;
+    min-width: 320px;
+}
+.left {
+    width: 50%;
+    text-align: left;
+    margin-left: 2%;
+    min-width: 320px;
+}
 
+
+
+/* Manage, div to portfolio, responsive for all devices */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+}
+.portfolio-detail {
+    max-width: 900px;
+}
+.portfolio p {
+    padding-bottom: 2%;
+}
+.portfolio img{
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width:70%;
+    margin: auto;
+}
+.portfolio-detail h3 {
+    width: 100%;
+    border-bottom: 3px solid #DB504A;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+.portfolio-techno span, .portfolio-link a {
+    margin: 0 auto;
+    background: #A63446;
+    color: #fff;
+    border-radius: 7px;
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+}
+.portfolio-link, .portfolio-techno {
+    display: inline-block;
+    font-size: 1.1rem;
+}
 
 
 
@@ -194,8 +271,7 @@ ul li a {
     .bg {
         background: url("../img/wallpaper-1280.jpg") no-repeat center center fixed;
         background-size: cover;
-        min-height: 100vh;
-        min-width: 100vh;
+        background-position: 0 0;
     }
     /* This style, manages if there are an cursor on the link */
     .menu ul li a:hover {
@@ -211,29 +287,31 @@ ul li a {
     .hidden-desktop i{
         display: none;
     }
-}
-@media (min-width: 1200px) {
-    .bg {
-        background: url("../img/wallpaper-1280.jpg") no-repeat center center fixed;
-        background-size: cover;
-        min-height: 100vh;
-        min-width: 100vh;
+    .portfolio-detail {
+        margin: 0 auto;
+    }
+    .portfolio-detail img {
+        width: 40%;
+        float: left;
+        margin-right: 5%;
+    }
+    .portfolio-link, .portfolio-techno {
+        margin: auto;
+        margin-bottom: auto;
     }
 }
 @media (min-width: 1400px) {
-    .bg{
+    .bg {
         background: url("../img/wallpaper-1920.jpg") no-repeat center center fixed;
         background-size: cover;
-        min-height: 100vh;
-        min-width: 100vh;
+        background-position: 0 0;
     }
 }
 @media (min-width: 1700px) {
     .bg {
         background: url("../img/wallpaper-4032.jpg") no-repeat center center fixed;
         background-size: cover;
-        min-height: 100vh;
-        min-width: 100vh;
+        background-position: 0 0;
     }
 }
 /* ==========================================================================
