@@ -6,169 +6,179 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Antoine Lemichel | Développeur web</title>
   <meta name="description" content="Antoine Lemichel, développeur web sur Lille">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="author" href="humans.txt" />
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-
-<body>
-  <div class="bg flex-container">
+<body data-spy="scroll" data-target=".navbar" data-offset="5">
+  <div class="bg">
     <div class="home" id="home">
       <header>
-        <ul class="country">
-          <li>
-            <a href="http://antoine-lemichel.fr">Français</a>
-          </li>
-          <li>
-            <a href="http://antoine-lemichel.com">English</a>
-          </li>
-        </ul>
-        <nav class="menu">
-          <ul>
-            <li class="hidden-mobile">
-              <a href="#home">Accueil</a>
-            </li>
-            <li class="hidden-mobile">
-              <a href="#aboutMe">A propos</a>
-            </li>
-            <li class="hidden-mobile">
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li class="hidden-mobile">
-              <a href="#contact">Contact</a>
-            </li>
-            <li class="hidden-desktop">
-              <i class="fas fa-bars" onclick="myFonction()"></i>
+        <div class="container">
+          <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">Antoine Lemichel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#home">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#aboutMe">A propos de moi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <ul class="return-top">
+            <li>
+              <a href="#portfolio">
+                <i class="fas fa-angle-up"></i>
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="return-top">
-          <li>
-            <a href="#home">
-              <i class="fas fa-angle-up"></i>
-            </a>
-          </li>
-        </ul>
+        </div>
+        <div class="heading">
+          <img src="img/heading.png" alt="Name pictures">
+        </div>
       </header>
     </div>
   </div>
-  <div class="container">
-    <div class="aboutMe">
-      <h2 id="aboutMe">A propos de moi</h2>
-      <div class="right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis, nisi ac posuere pharetra, enim enim rutrum
-          magna, at commodo turpis enim vitae enim. Integer ac mi sit amet felis convallis tempus eu at augue. Aliquam ullamcorper
-          rhoncus nibh et pulvinar. Sed porta sit amet magna et faucibus. Nulla vehicula tempor magna, ut dignissim nulla
-          tincidunt eu. Mauris non pulvinar ligula. Nullam eget elementum leo. Aliquam sit amet faucibus eros. Quisque euismod
-          nulla quis velit dignissim vulputate vitae a neque. Pellentesque efficitur pharetra eros at accumsan. Vestibulum
-          pretium sem euismod urna posuere, ut aliquet purus iaculis. Pellentesque habitant morbi tristique senectus et netus
-          et malesuada fames ac turpis egestas. Pellentesque ultrices volutpat erat, in malesuada elit pellentesque et. Etiam
-          nisl eros, varius eu porttitor id, aliquet eget sapien.
-        </p>
+  <div class="container-portfolio" id="portfolio">
+    <h2>Mes réalisations</h2>
+    <section class="portfolio">
+      <h3>Portfolio</h3>
+      <img src="img/wallpaper-640.jpg" alt="Background image into portfolio" class="rounded">
+      <p>Dans le cadre de la formation Yes We Web, j'avais comme exercice à faire, un portfolio.</p>
+      <div class="portfolio-techno">
+        <span>HTML5/CSS3</span>
+        <span>Bootstrap</span>
+        <span>JavaScript/Jquery</span>
+        <span>PHP</span>
       </div>
-      <div class="left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis, nisi ac posuere pharetra, enim enim rutrum
-          magna, at commodo turpis enim vitae enim. Integer ac mi sit amet felis convallis tempus eu at augue. Aliquam ullamcorper
-          rhoncus nibh et pulvinar. Sed porta sit amet magna et faucibus. Nulla vehicula tempor magna, ut dignissim nulla
-          tincidunt eu. Mauris non pulvinar ligula. Nullam eget elementum leo. Aliquam sit amet faucibus eros. Quisque euismod
-          nulla quis velit dignissim vulputate vitae a neque. Pellentesque efficitur pharetra eros at accumsan. Vestibulum
-          pretium sem euismod urna posuere, ut aliquet purus iaculis. Pellentesque habitant morbi tristique senectus et netus
-          et malesuada fames ac turpis egestas. Pellentesque ultrices volutpat erat, in malesuada elit pellentesque et. Etiam
-          nisl eros, varius eu porttitor id, aliquet eget sapien.
-        </p>
+      <div class="portfolio-link">
+        <a href="https://github.com/AntoineLemichel/portfolio/" target="_blank">Github</a>
+        <a href="https://trello.com/b/In0ZD0f0/portfolio" target="_blank">Trello</a>
       </div>
+    </section>
+    <section class="portfolio">
+      <h3>Portfolio TEST</h3>
+      <img src="img/wallpaper-640.jpg" alt="Background image into portfolio" class="rounded">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis, nisi ac posuere pharetra, enim enim rutrum magna,
+        at commodo turpis enim vitae enim. Integer ac mi sit amet felis convallis tempus eu at augue. Aliquam ullamcorper
+        rhoncus nibh et pulvinar. Sed porta sit amet magna et faucibus. Nulla vehicula tempor magna, ut dignissim nulla tincidunt
+        eu. Mauris non pulvinar ligula. Nullam eget elementum leo. Aliquam sit amet faucibus eros. Quisque euismod nulla
+        quis velit dignissim vulputate vitae a neque. Pellentesque efficitur pharetra eros at accumsan. Vestibulum pretium
+        sem euismod urna posuere, ut aliquet purus iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Pellentesque ultrices volutpat erat, in malesuada elit pellentesque et. Etiam nisl eros,
+        varius eu porttitor id, aliquet eget sapien.</p>
+      <div class="portfolio-techno">
+        <span>HTML5/CSS3</span>
+        <span>Bootstrap</span>
+        <span>JavaScript/Jquery</span>
+        <span>PHP</span>
+      </div>
+      <div class="portfolio-link">
+        <a href="https://github.com/AntoineLemichel/portfolio/" target="_blank">Github</a>
+        <a href="https://trello.com/b/In0ZD0f0/portfolio" target="_blank">Trello</a>
+      </div>
+    </section>
+
+
+  </div>
+  <div class="aboutMe">
+    <h2 id="aboutMe">A propos de moi</h2>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis, nisi ac posuere pharetra, enim enim rutrum magna,
+        at commodo turpis enim vitae enim. Integer ac mi sit amet felis convallis tempus eu at augue. Aliquam ullamcorper
+        rhoncus nibh et pulvinar. Sed porta sit amet magna et faucibus. Nulla vehicula tempor magna, ut dignissim nulla tincidunt
+        eu. Mauris non pulvinar ligula. Nullam eget elementum leo. Aliquam sit amet faucibus eros. Quisque euismod nulla
+        quis velit dignissim vulputate vitae a neque. Pellentesque efficitur pharetra eros at accumsan. Vestibulum pretium
+        sem euismod urna posuere, ut aliquet purus iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Pellentesque ultrices volutpat erat, in malesuada elit pellentesque et. Etiam nisl eros,
+        varius eu porttitor id, aliquet eget sapien.
+      </p>
     </div>
-
-    <div class="portfolio">
-      <h2 id="portfolio">Portfolio</h2>
-      <div class="portfolio-detail">
-        <h3>Portfolio</h3>
-        <img src="img/wallpaper-640.jpg" alt="Background image into portfolio">
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis, nisi ac posuere pharetra, enim enim rutrum
-          magna, at commodo turpis enim vitae enim. Integer ac mi sit amet felis convallis tempus eu at augue. Aliquam ullamcorper
-          rhoncus nibh et pulvinar. Sed porta sit amet magna et faucibus. Nulla vehicula tempor magna, ut dignissim nulla
-          tincidunt eu. Mauris non pulvinar ligula. Nullam eget elementum leo. Aliquam sit amet faucibus eros. Quisque euismod
-          nulla quis velit dignissim vulputate vitae a neque. Pellentesque efficitur pharetra eros at accumsan. Vestibulum
-          pretium sem euismod urna posuere, ut aliquet purus iaculis. Pellentesque habitant morbi tristique senectus et netus
-          et malesuada fames ac turpis egestas. Pellentesque ultrices volutpat erat, in malesuada elit pellentesque et. Etiam
-          nisl eros, varius eu porttitor id, aliquet eget sapien.</p>
-        <div class="portfolio-bottom">
-          <div class="portfolio-techno">
-            <span>HTML5/CSS3</span>
-            <span>JavaScript</span>
-            <span>PHP</span>
-          </div>
-          <div class="portfolio-link">
-            <span>
-              <a href="https://github.com/AntoineLemichel/portfolio/">Github</a>
-            </span>
-            <span>
-              <a href="https://trello.com/b/In0ZD0f0/portfolio">Trello</a>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="portfolio-detail">
-        <h3>Portfolio 2 TEST</h3>
-        <img src="img/wallpaper-640.jpg" alt="Background image into portfolio" style="float:right;">
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis, nisi ac posuere pharetra, enim enim rutrum
-          magna, at commodo turpis enim vitae enim. Integer ac mi sit amet felis convallis tempus eu at augue. Aliquam ullamcorper
-          rhoncus nibh et pulvinar. Sed porta sit amet magna et faucibus. Nulla vehicula tempor magna, ut dignissim nulla
-          tincidunt eu. Mauris non pulvinar ligula. Nullam eget elementum leo. Aliquam sit amet faucibus eros. Quisque euismod
-          nulla quis velit dignissim vulputate vitae a neque. Pellentesque efficitur pharetra eros at accumsan. Vestibulum
-          pretium sem euismod urna posuere, ut aliquet purus iaculis. Pellentesque habitant morbi tristique senectus et netus
-          et malesuada fames ac turpis egestas. Pellentesque ultrices volutpat erat, in malesuada elit pellentesque et. Etiam
-          nisl eros, varius eu porttitor id, aliquet eget sapien.</p>
-        <div class="portfolio-bottom">
-          <div class="portfolio-techno">
-            <span>HTML5/CSS3</span>
-            <span>PHP</span>
-          </div>
-          <div class="portfolio-link">
-            <span>
-              <a href="https://github.com/AntoineLemichel/portfolio/">Github</a>
-            </span>
-            <span>
-              <a href="https://trello.com/b/In0ZD0f0/portfolio">Trello</a>
-            </span>
-          </div>
-        </div>
-      </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis, nisi ac posuere pharetra, enim enim rutrum magna,
+        at commodo turpis enim vitae enim. Integer ac mi sit amet felis convallis tempus eu at augue. Aliquam ullamcorper
+        rhoncus nibh et pulvinar. Sed porta sit amet magna et faucibus. Nulla vehicula tempor magna, ut dignissim nulla tincidunt
+        eu. Mauris non pulvinar ligula. Nullam eget elementum leo. Aliquam sit amet faucibus eros. Quisque euismod nulla
+        quis velit dignissim vulputate vitae a neque. Pellentesque efficitur pharetra eros at accumsan. Vestibulum pretium
+        sem euismod urna posuere, ut aliquet purus iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Pellentesque ultrices volutpat erat, in malesuada elit pellentesque et. Etiam nisl eros,
+        varius eu porttitor id, aliquet eget sapien.
+      </p>
     </div>
-    <h2>Envoie moi un message !</h2>
-    <div class="contact" id="contact">
+  </div>
+  <h2>Envoie moi un message !</h2>
+  <div class="contact" id="contact">
 
-      <form action="cible.php">
-        <div class="contact-top">
-          <input type="text" name="name" id="name" placeholder="Nom/Prénom *" required>
-          <input type="text" name="email" id="email" placeholder="Email *" required>
-          <input type="text" name="phone-number" id="phone-number" placeholder="Téléphone">
-        </div>
-          <textarea name="message" cols="20" rows="2" placeholder="Message *" required></textarea>
-          <input type="submit" value="Envoyer">
-      </form>
-      <span><strong>Le formulaire de contact est pour le moment indisponible.</strong></span>
-    </div>
+    <form action="cible.php">
+      <div class="contact-top">
+        <input type="text" name="name" id="name" placeholder="Nom/Prénom *" required>
+        <input type="text" name="email" id="email" placeholder="Email *" required>
+        <input type="text" name="phone-number" id="phone-number" placeholder="Téléphone">
+        <textarea name="message" cols="20" rows="2" placeholder="Message *" required></textarea>
+        <input type="submit" value="Envoyer">
+      </div>
+
+    </form>
+    <span>
+      <strong>Le formulaire de contact est pour le moment indisponible.</strong>
+
+      <em>Tu peux cependant m'envoyer un mail directement :
+        <a href="mailto:antoine.lemichel@newgates.fr">ici</a>
+      </em>
+    </span>
   </div>
   <footer>
     <ul>
       <li>
-        <a href="https://github.com/AntoineLemichel/">Github<img src="https://png.icons8.com/windows/40/000000/github.png" alt="Picture github"></a>
+        <a href="https://github.com/AntoineLemichel/" target="_blank">Github
+          <img src="https://png.icons8.com/windows/40/000000/github.png" alt="Picture github">
+        </a>
       </li>
       <li>
-        <a href="">Linkedin <img src="https://png.icons8.com/ios-glyphs/40/000000/linkedin-circled.png" alt="Picture linkedin"></a>
+        <a href="https://www.linkedin.com/in/antoine-lemichel/" target="_blank">Linkedin
+          <img src="https://png.icons8.com/ios-glyphs/40/000000/linkedin-circled.png" alt="Picture linkedin">
+        </a>
       </li>
       <li>
-        <a href="cv.pdf">Consulter/Télécharger mon CV <img src="https://png.icons8.com/ios-glyphs/30/000000/resume.png" alt="Picture CV"></a>
+        <a href="CV-LEMICHEL-Antoine.pdf" download="CV-LEMICHEL-Antoine.pdf">Consulter/Télécharger mon CV
+          <img src="https://png.icons8.com/ios-glyphs/30/000000/resume.png" alt="Picture CV">
+        </a>
+      </li>
+    </ul>
+    <ul class="country">
+      <li>
+        <a href="http://antoine-lemichel.fr">Français
+          <img src="https://png.icons8.com/office/50/000000/france.png" alt="Picture flag french">
+        </a>
+      </li>
+      <li>
+        <a href="404.html">English
+          <img src="https://png.icons8.com/office/40/000000/great-britain.png" alt="Picture flag english">
+        </a>
       </li>
     </ul>
   </footer>
@@ -181,8 +191,13 @@
   <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
   </script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/plugins.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
