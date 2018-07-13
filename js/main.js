@@ -16,3 +16,18 @@ $(function() {
         }
     });
 });
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+// Function jQuery to remove menu (mobile) after click on a link
+$(document).ready(function () {
+    $(".navbar-nav li a").click(function(event) {
+        $(".navbar-collapse").collapse('hide');
+    });
+});
+// Function jQuery to remove menu (mobile) after click everywhere
+$(document).ready(function() {
+    $("html").on("touchstart click", function(event) {
+        $(".navbar-collapse").collapse('hide');
+    });
+});
