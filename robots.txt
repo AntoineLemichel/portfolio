@@ -1,0 +1,5 @@
+# www.robotstxt.org/
+Sitemap: http://antoine-lemichel.fr/sitemap.xml
+# Allow crawling of all content
+User-agent: *
+Disallow:
