@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    My role on this project : LEMICHEL Antoine dev
+    Site : http://antoine-lemichel.fr
+    Linkedin : https://www.linkedin.com/in/antoine-lemichel/
+    Location : Lille, France
+    Email : antoine.lemichel[at]newgates.fr
+
+# THANKS
+
+    Yes We Web at Lesquin, France.
+
+# TECHNOLOGY COLOPHON
+    Last update : 2018/07/10
+    CSS3, HTML5, JavaScript
+    Apache Server Configs, jQuery, Modernizr, Normalize.css, PHP7

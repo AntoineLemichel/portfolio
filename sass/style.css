@@ -1,0 +1,555 @@
+@charset "UTF-8";
+/* 
+==================================================
+==================================================
+==================================================
+       Starting style boilerplate HTML5
+==================================================
+==================================================
+==================================================
+*/
+fieldset,
+hr {
+  border: 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+h2:after,
+h2:before,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+fieldset {
+  margin: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browserupgrade {
+  margin: .2em 0;
+  background: #ccc;
+  color: #000;
+  padding: .2em 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:after,
+.clearfix:before {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+@media print {
+  blockquote,
+  img,
+  pre,
+  tr {
+    page-break-inside: avoid;
+  }
+  *,
+  :after,
+  :before {
+    background: 0 0 !important;
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  blockquote,
+  pre {
+    border: 1px solid #999;
+  }
+  thead {
+    display: table-header-group;
+  }
+  h2,
+  h3,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* 
+==================================================
+==================================================
+==================================================
+       End style boilerplate HTML5
+==================================================
+==================================================
+==================================================
+*/
+.button, .cv {
+  color: #fff !important;
+  background: #A63446;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: .7rem;
+  margin: auto auto 75px auto;
+  max-width: 200px;
+}
+
+.button:hover, .cv:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 
+==================================================
+==================================================
+==================================================
+    Manage basics style for all devices
+==================================================
+==================================================
+==================================================
+*/
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+body ul, html ul {
+  margin: 0;
+  padding: 0;
+}
+
+body ul li, html ul li {
+  list-style: none;
+}
+
+body ul li a, html ul li a {
+  text-decoration: none !important;
+}
+
+body ul li a:hover, html ul li a:hover {
+  text-decoration: none !important;
+  color: #fff;
+}
+
+body ul li i, html ul li i {
+  font-size: 2.5rem;
+  color: #A63446;
+}
+
+body strong, html strong {
+  color: #A63446;
+  text-decoration: underline;
+}
+
+h1 {
+  color: #A63446 !important;
+}
+
+/* 
+==================================================
+==================================================
+==================================================
+        Manage h2 with bar on left and right
+==================================================
+==================================================
+==================================================
+*/
+h2 {
+  overflow: hidden;
+  text-align: center;
+  color: #A63446;
+  margin: 0 0 40px 0 !important;
+}
+
+h2:after, h2:before {
+  background-color: #2E2E3A;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  width: 55%;
+}
+
+h2:before {
+  right: .5em;
+  margin: 0 0 0 -50%;
+}
+
+h2:after {
+  left: .5em;
+  margin: 0 -50% 0 0;
+}
+
+h3 {
+  width: 100%;
+  border-bottom: 1px solid #DB504A;
+  text-align: center;
+  margin: 0 0 50px 0 !important;
+}
+
+.nav-link {
+  text-align: right;
+}
+
+.heading {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+}
+
+.heading p {
+  color: steelblue;
+  font-weight: lighter;
+}
+
+.bg {
+  background: url(../img/wallpaper-640.jpg) no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+}
+
+.return-top {
+  margin: 0 30px 0 0 !important;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.return-top a {
+  font-size: 3rem;
+  color: #A63446;
+}
+
+/* 
+==================================================
+==================================================
+==================================================
+        Manage portfolio for mobile first
+==================================================
+==================================================
+==================================================
+*/
+.portfolio {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.portfolio p {
+  margin: 20px;
+  text-align: center;
+}
+
+.portfolio img {
+  width: 300px;
+  margin: 0 auto;
+  align-self: flex-start;
+}
+
+.portfolio span {
+  font-size: 0.7rem;
+}
+
+.portfolio .portfolio-link {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 0 20px 0;
+}
+
+.portfolio .portfolio-link a {
+  margin: 5px;
+  padding: 3px;
+  width: 130px;
+  text-align: center;
+  border: 1px solid #A63446;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #A63446;
+}
+
+.portfolio .portfolio-link a:hover {
+  text-decoration: none;
+}
+
+.portfolio .portfolio-techno {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.portfolio .portfolio-techno span {
+  margin: 5px;
+  padding: 3px;
+  width: 130px;
+  text-align: center;
+  background: #A63446;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.bref p {
+  text-align: center;
+  margin: 10px;
+}
+
+/* 
+==================================================
+==================================================
+==================================================
+        Manage contact for mobile first
+==================================================
+==================================================
+==================================================
+*/
+.contact {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  width: 200px;
+  max-width: 350px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  border: none;
+  background: #2E2E3A;
+  padding: 7px;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 0 5px 0;
+  outline-style: none;
+}
+
+.contact input:focus, .contact textarea:focus {
+  border: 2px solid #A63446;
+}
+
+.contact .contact-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv a {
+  color: #fff;
+  padding: 10px;
+}
+
+.cv a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cv:hover {
+  background: #DB504A;
+}
+
+/* 
+==================================================
+==================================================
+==================================================
+        Manage footer for mobile first
+==================================================
+==================================================
+==================================================
+*/
+footer {
+  background: #2E2E3A;
+}
+
+footer ul li {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+footer ul li img {
+  width: 32px;
+}
+
+footer ul li a {
+  color: #fff;
+  background: #A63446;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+footer ul li a:hover {
+  background: #DB504A;
+}
+
+@media (min-width: 768px) {
+  .bg {
+    background: url(../img/wallpaper-1280.jpg) no-repeat fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  h2 {
+    text-align: center;
+  }
+  h2::after, h2::before {
+    width: 80%;
+  }
+  .portfolio {
+    flex-direction: row;
+    width: 100%;
+  }
+  .portfolio img, .portfolio p {
+    margin: 0 0 0 20px;
+  }
+  .portfolio .portfolio-link, .portfolio .portfolio-techno {
+    flex-direction: row;
+  }
+  .portfolio p  {
+    min-width: 300px;
+    max-width: 500px;
+  }
+  .contact {
+    width: 800px;
+    max-width: 800px;
+    flex-direction: column;
+  }
+  .contact .contact-bottom {
+    align-items: center;
+  }
+  .contact .contact-bottom textarea {
+    width: 400px;
+    max-width: 400px;
+    margin: 0 0 10px 0;
+    padding: 10px 5px 10px 5px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* 
+        ==================================================
+        Manage media for large devices (tablet and computeur)
+        ==================================================
+    */
+  .bg {
+    background: url(../img/wallpaper-1920.jpg) no-repeat fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* 
+        ==================================================
+        Manage media for extra-large devices (tablet and computeur)
+        ==================================================
+    */
+  .bg {
+    background: url(../img/wallpaper-4032.jpg) no-repeat fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  .portfolio-link,
+  .portfolio-techno {
+    flex-direction: column;
+  }
+}
+
+/* 
+==================================================
+==================================================
+==================================================
+                End style for me
+==================================================
+==================================================
+==================================================
+*/

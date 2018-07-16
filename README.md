@@ -5,15 +5,15 @@ It's my portfolio
 - [X] Adding README
 - [X] Adding web server with apache2 and php7
 - [X] Purchase domain
-- [ ] Make wireframe
-- [ ] Structured html
-- [ ] Semantics html correctly
+- [X] Make wireframe
+- [X] Structured html
+- [X] Semantics html correctly
 - [ ] Security to web server
-- 
+- [ ] Adding french and english translate
 
 ## Structure HTML
 - [X] Adding pictures into index
 - [X] Picture for all devices
-- [ ] Adding my production, contact, about me
+- [X] Adding my production, contact, about me
 
 ## README is in progress working

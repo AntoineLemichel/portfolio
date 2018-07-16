@@ -1,0 +1,248 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+<!-- Author : Antoine Lemichel
+Web site : https://antoine-lemichel.fr
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Antoine Lemichel | Développeur Web Junior sur Lille</title>
+  <meta name="description" content="Antoine Lemichel, développeur Web Junior sur Lille, étudiant à la formation Yes We Web à Lesquin.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="author" href="humans.txt" />
+
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="sass/style.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="10">
+  <!-- 
+  =====================================
+  =====================================
+        Manage navbar
+  =====================================
+  =====================================
+ -->
+  <div class="bg">
+    <div class="home" id="home">
+      <header>
+        <div class="container">
+          <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">Antoine Lemichel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#home">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#aboutMe">A propos de moi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <ul class="return-top">
+            <li>
+              <a href="#portfolio">
+                <i class="fas fa-angle-up"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="heading">
+          <h1>Antoine LEMICHEL</h1>
+          <p>Développeur Web Junior</p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <!-- 
+  =====================================
+  =====================================
+        Manage my production
+  =====================================
+  =====================================
+ -->
+
+
+
+
+
+
+
+
+  <div class="container-portfolio" id="portfolio">
+    <h2>Mes réalisations</h2>
+    <section class="portfolio">
+      <h3>Portfolio</h3>
+      <img src="img/wallpaper-640.jpg" alt="Background image into portfolio" class="rounded">
+      <p>Dans le cadre de la formation Yes We Web, j'avais comme exercice à faire, un portfolio. Utilisation de frameworks autorisé.</p>
+      <div class="portfolio-techno">
+        <span data-toggle="tooltip" data-placement="bottom" title="Utilisation des bonnes pratiques de HTML5 et CSS3">HTML5/CSS3</span>
+        <span>SASS/SCSS</span>
+        <span data-toggle="tooltip" data-placement="bottom" title="J'ai utilisé bootstrap dans sa version 4.1">Bootstrap</span>
+        <span>JavaScript/Jquery</span>
+        <span data-toggle="tooltip" data-placement="bottom" title="Utilisation de PHP7 dans sa version POO">PHP</span>
+      </div>
+      <div class="portfolio-link">
+        <a href="https://github.com/AntoineLemichel/portfolio/" target="_blank">Github</a>
+        <a href="https://trello.com/b/In0ZD0f0/portfolio" target="_blank">Trello</a>
+      </div>
+    </section>
+  </div>
+  <!-- 
+  =====================================
+  =====================================
+        Manage About me
+  =====================================
+  =====================================
+ -->
+
+
+
+
+
+
+
+  <div class="aboutMe">
+    <h2 id="aboutMe">A propos de moi</h2>
+    <div class="bref">
+      <h3>En bref ?</h3>
+      <p>Antoine - 22 ans - Lille - Autodidacte. Partisan de l'open source - amoureux de Linux. Je mélange Dev et Système -
+        J'aime toucher à tout dans l'informatique. Anciennement technicien réseau - Administrateur Système Windows & Linux.
+        Passionné par le numérique de demain - cryptologie. Je suis actuellement étudiant à la formation Yes We Web.
+        <strong>Et si demain on travaillait ensemble ?</strong>
+        Il y'a un formulaire de contact en dessous, profites-en, je ne mords pas :).
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- 
+  =====================================
+  =====================================
+        Manage contact
+  =====================================
+  =====================================
+ -->
+  <h2>Contact</h2>
+  <div class="contact" id="contact">
+    <form action="cible.php">
+      <div class="contact-top">
+        <input class="input" type="text" name="name" id="name" placeholder="Nom/Prénom *" required>
+        <input class="input" type="email" name="email" id="email" placeholder="Email *" required>
+        <input class="input" type="text" name="phone-number" id="phone-number" placeholder="Téléphone">
+      </div>
+      <div class="contact-bottom">
+        <textarea name="message" cols="10" rows="3" placeholder="Message *" required></textarea>
+        <input type="submit" value="Envoyer">
+      </div>
+    </form>
+    <span>
+      <strong>Le formulaire de contact est pour le moment indisponible.</strong>
+
+      <em>Tu peux cependant m'envoyer un mail directement :
+        <a href="mailto:admin@antoine-lemichel.fr">ici</a>
+      </em>
+    </span>
+    <span class="cv">
+      <a href="CV-LEMICHEL-Antoine.pdf" download="CV-LEMICHEL-Antoine.pdf">Consulter/Télécharger mon CV
+        <img src="https://png.icons8.com/ios-glyphs/30/000000/resume.png" alt="Picture CV">
+      </a>
+    </span>
+  </div>
+
+
+
+
+
+  <!-- 
+  =====================================
+  =====================================
+        Manage footer
+  =====================================
+  =====================================
+ -->
+  <footer>
+    <ul>
+      <li>
+        <a href="https://github.com/AntoineLemichel/" target="_blank">
+          <img src="https://png.icons8.com/windows/40/000000/github.png" alt="Picture github">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/antoine-lemichel/" target="_blank">
+          <img src="https://png.icons8.com/ios-glyphs/40/000000/linkedin-circled.png" alt="Picture linkedin">
+        </a>
+      </li>
+      <li>
+        <a href="http://antoine-lemichel.fr">
+          <img src="https://png.icons8.com/office/50/000000/france.png" alt="Picture flag french">
+        </a>
+      </li>
+      <li>
+        <a href="404.html">
+          <img src="https://png.icons8.com/office/40/000000/great-britain.png" alt="Picture flag english">
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+
+
+
+
+
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
