@@ -25,7 +25,7 @@ Web site : https://antoine-lemichel.fr
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="10" class="test">
+<body data-spy="scroll" data-target=".navbar" data-offset="1" class="test">
   <!-- 
   =====================================
   =====================================
@@ -119,10 +119,9 @@ Web site : https://antoine-lemichel.fr
 
 
 
-  <h2 id="aboutMe">A propos de moi</h2>
-  <div class="bgFooter"></div>
-
+  <div class="bgFooter" id="aboutMe"></div>
   <div class="aboutMe">
+    <h2 >A propos de moi</h2>
     <p>Antoine 22 ans autodidacte à Lille. Partisan de l'open source & amoureux de Linux. Je mélange Dev et Système.
       J'aime
       toucher à tout dans l'informatique. Anciennement Administrateur Système Windows & Linux. Passionné par le
@@ -150,8 +149,8 @@ Web site : https://antoine-lemichel.fr
   =====================================
   =====================================
  -->
-  <h2>Contact</h2>
-  <div class="contact" id="contact">
+  <h2 id="contact">Contact</h2>
+  <div class="contact">
     <form method="post">
       <div class="contact-@p">
         <input class="input" type="text" name="name" id="name" placeholder="Nom/Prénom *" required>
@@ -159,25 +158,18 @@ Web site : https://antoine-lemichel.fr
       </div>
       <div class="contact-bottom">
         <textarea name="message" cols="10" rows="3" placeholder="Message *" required></textarea>
-        <input type="submit" value="Envoyer" id="buttonSend" onclick="document.getElementById('alert').style.visibility='visible'">
-      </div>
-      <div class="alert alert-danger d-none" role="alert">
-        <strong>Oh snap!</strong>
-        <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+        <input type="submit" value="Envoyer" id="buttonSend" class="sendMessage">
       </div>
     </form>
     <span>
       <strong>Le formulaire de contact est pour le moment indisponible.</strong>
-
       <em>Tu peux cependant m'envoyer un mail directement :
         <a href="mailto:contact@antoine-lemichel.fr">ici</a>
       </em>
     </span>
-    <span class="cv">
-      <a href="CV-LEMICHEL-Antoine.pdf" download="CV-LEMICHEL-Antoine.pdf">Consulter/Télécharger mon CV
-        <i class="fas fa-address-card"></i>
-      </a>
-    </span>
+    <a target="_blank" href="CV-AntoineLEMICHEL.pdf" class="cv">Consulter/Télécharger mon CV
+      <i class="fas fa-address-card"></i>
+    </a>
   </div>
 
 
@@ -201,7 +193,7 @@ Web site : https://antoine-lemichel.fr
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/antoine-lemichel/" target="_blank">
+        <a href="https://fr.linkedin.com/in/antoine-lemichel" target="_blank">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>

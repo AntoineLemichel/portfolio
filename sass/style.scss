@@ -224,7 +224,6 @@ html {
                 &:hover {
                     text-decoration: none !important;
                     color: $color-orange !important;
-                    transform: scale(1.2);
                 }
             }
         }
@@ -232,7 +231,6 @@ html {
 
     .active {
         color: $color-orange !important;
-        border-bottom: 1px solid $color-orange;
     }
 
     strong {
@@ -270,13 +268,15 @@ h2 {
     margin: 0 0 40px 0 !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     margin: 80px 0 80px 0 !important;
+    padding: 80px 0 0 0;
 }
 
 .nav-link {
     text-align: right;
 }
 
-.fa-bars, .fa-times {
+.fa-bars,
+.fa-times {
     color: #fff;
     font-size: 2rem;
 }
@@ -314,7 +314,7 @@ h2 {
     z-index: 10;
     position: fixed;
     bottom: 0;
-    right: 10px;
+    right: -20px;
 
     a {
         font-size: 3rem;
@@ -386,6 +386,13 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     margin: -1px auto -1px auto;
+    text-align: center;
+
+    h2 {
+        margin: auto;
+        width: 100%;
+        padding: 30px;
+    }
 
     p {
         text-align: center;
@@ -403,10 +410,13 @@ h2 {
         font-weight: bold;
         text-align: center;
         max-width: 100%;
+        text-align: center;
+        margin: auto;
 
         p {
             color: $color-orange;
             margin: auto;
+            width: 100%;
         }
     }
 }
@@ -448,12 +458,22 @@ h2 {
         padding: 7px;
         color: #fff;
         border-radius: 5px;
+        width: 300px;
         margin: 0 0 10px 0;
         outline-style: none;
+        height: 50px;
 
         &:focus {
             border: 2px solid $color-orange;
         }
+    }
+
+    textarea {
+        height: 80px;
+    }
+
+    .sendMessage {
+        cursor: pointer;
     }
 
     .contact-bottom {
@@ -464,6 +484,8 @@ h2 {
 
 .cv {
     @extend .button;
+    margin: 40px auto auto auto;
+    font-size: 1.1rem;
 
     i {
         font-size: 1.8rem;
@@ -511,6 +533,9 @@ footer {
 }
 
 @media (min-width: 768px) {
+    .active {
+        border-bottom: 1px solid $color-orange;
+    }
     .bg {
         background: url(../img/wallpaper-1280.jpg) no-repeat fixed;
         background-size: cover;
@@ -550,14 +575,14 @@ footer {
 
     .contact {
         width: 800px;
-        max-width: 800px;
         flex-direction: column;
 
         .contact-bottom {
             align-items: center;
 
+            input,
             textarea {
-                width: 400px;
+                width: 300px;
                 max-width: 400px;
                 margin: 0 0 10px 0;
                 padding: 10px 5px 10px 5px;
@@ -571,6 +596,12 @@ footer {
 
         p {
             max-width: 500px;
+        }
+
+        .textLike {
+            max-width: 150px;
+            height: 100px;
+            margin: auto;
         }
     }
 }
