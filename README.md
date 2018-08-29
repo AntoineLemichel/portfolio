@@ -5,9 +5,9 @@ It's my portfolio
 - [X] Adding README
 - [X] Adding web server with apache2 and php7
 - [X] Purchase domain
-- [] Make wireframe
-- [] Structured html
-- [] Semantics html correctly
+- [X] Make wireframe
+- [X] Structured html
+- [X] Semantics html correctly
 
 
-## README is in progress working
+## My portfolio is in progress working
