@@ -7,7 +7,6 @@
 ==================================================
 ==================================================
 */
-
 fieldset,
 hr {
     border: 0;
@@ -62,6 +61,7 @@ textarea {
     color: #000;
     padding: .2em 0;
 }
+
 .hidden {
     display: none !important;
 }
@@ -104,12 +104,14 @@ textarea {
 }
 
 @media print {
+
     blockquote,
     img,
     pre,
     tr {
         page-break-inside: avoid;
     }
+
     *,
     :after,
     :before {
@@ -119,41 +121,51 @@ textarea {
         box-shadow: none !important;
         text-shadow: none !important;
     }
+
     a,
     a:visited {
         text-decoration: underline;
     }
+
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
+
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
+
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
+
     pre {
         white-space: pre-wrap !important;
     }
+
     blockquote,
     pre {
         border: 1px solid #999;
     }
+
     thead {
         display: table-header-group;
     }
+
     h2,
     h3,
     p {
         orphans: 3;
         widows: 3;
     }
+
     h2,
     h3 {
         page-break-after: avoid;
     }
 }
+
 /* 
 ==================================================
 ==================================================
@@ -163,29 +175,23 @@ textarea {
 ==================================================
 ==================================================
 */
+$color-orange: #E64B3B;
 
-
-
-
-
-
-
-
-$color-red: #A63446;
-$color-orange: #DB504A;
 .button {
     color: #fff !important;
-    background: $color-red;
+    background: $color-orange;
     padding: 5px;
     border-radius: 5px;
     font-size: .7rem;
     margin: auto auto 75px auto;
     max-width: 200px;
+
     &:hover {
         color: #fff;
         text-decoration: none;
     }
 }
+
 /* 
 ==================================================
 ==================================================
@@ -195,37 +201,59 @@ $color-orange: #DB504A;
 ==================================================
 ==================================================
 */
-body, html {
+body,
+html {
     padding: 0;
     margin: 0;
     height: 100%;
     font-family: Roboto, sans-serif;
+    color: #34495E !important;
+
     ul {
         margin: 0;
         padding: 0;
+
         li {
             list-style: none;
+            margin: 0 10px 0 10px;
+            font-size: 1.2rem;
+
             a {
                 text-decoration: none !important;
+
                 &:hover {
                     text-decoration: none !important;
-                    color: #fff;
+                    color: $color-orange !important;
+                    transform: scale(1.2);
                 }
-            }
-            i {
-                font-size: 2.5rem;
-                color: $color-red;
             }
         }
     }
+
+    .active {
+        color: $color-orange !important;
+        border-bottom: 1px solid $color-orange;
+    }
+
     strong {
-        color: $color-red;
+        color: $color-orange;
         text-decoration: underline;
+        font-weight: bold;
     }
 }
-h1{
-    color: $color-red !important;
+
+.navbar {
+    background: #1A2530;
+
+    a {
+        color: #fff;
+    }
 }
+
+h1 {
+    color: $color-orange !important;
+}
+
 /* 
 ==================================================
 ==================================================
@@ -236,47 +264,42 @@ h1{
 ==================================================
 */
 h2 {
-        overflow: hidden;
-        text-align: center;
-        color: $color-red;
-        margin: 0 0 40px 0 !important;
-        &:after,
-        &:before {
-            background-color: #2E2E3A;
-            content: "";
-            display: inline-block;
-            height: 2px;
-            position: relative;
-            width: 55%;
-        }
-        &:before {
-            right: .5em;
-            margin: 0 0 0 -50%;
-        }
-        &:after {
-            left: .5em;
-            margin: 0 -50% 0 0;
-        }
+    overflow: hidden;
+    text-align: center;
+    color: $color-orange !important;
+    margin: 0 0 40px 0 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    margin: 80px 0 80px 0 !important;
 }
-h3 {
-        width: 100%;
-        border-bottom: 1px solid $color-orange;
-        text-align: center;
-        margin: 0 0 50px 0 !important;
-}
+
 .nav-link {
     text-align: right;
 }
+
+.fa-bars, .fa-times {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.flags {
+    img {
+        width: 32px;
+    }
+}
+
 .heading {
     width: 100%;
     position: absolute;
     top: 50%;
     text-align: center;
+
     p {
-        color: steelblue;
-        font-weight: lighter;
+        color: #1A2530;
+        font-weight: bold;
+        font-size: 1.5rem;
     }
 }
+
 .bg {
     background: url(../img/wallpaper-640.jpg) no-repeat center;
     background-size: cover;
@@ -285,17 +308,20 @@ h3 {
     -o-background-size: cover;
     height: 100%;
 }
+
 .return-top {
     margin: 0 30px 0 0 !important;
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     bottom: 0;
-    right: 0; 
+    right: 10px;
+
     a {
         font-size: 3rem;
-        color: $color-red;
+        color: $color-orange;
     }
 }
+
 /* 
 ==================================================
 ==================================================
@@ -305,62 +331,98 @@ h3 {
 ==================================================
 ==================================================
 */
-.portfolio {
-    display: flex;
-    align-items: center;
-    flex-flow: column wrap;
+.container-portfolio {
     p {
         margin: 20px;
-        text-align:center;
+        text-align: center;
     }
-    img {
-        width: 300px;
-        margin: 0 auto;
-        align-self: flex-start;
-    }
+
     span {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        text-align: center;
     }
+
     .portfolio-link {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        margin: 0 0 20px 0;
+
         a {
             margin: 5px;
             padding: 3px;
-            width: 130px;
+            width: 80px;
             text-align: center;
-            border: 1px solid $color-red;
+            border: 1px solid $color-orange;
             border-radius: 5px;
             cursor: pointer;
-            color: $color-red;
-            &:hover{
+            color: $color-orange;
+
+            &:hover {
                 text-decoration: none;
             }
         }
-        
     }
+
     .portfolio-techno {
-        display: flex;
+        display: inline-flex;
         flex-flow: row wrap;
         justify-content: center;
+
         span {
             margin: 5px;
             padding: 3px;
-            width: 130px;
+            width: 114px;
             text-align: center;
-            background: $color-red;
+            background: $color-orange;
             border-radius: 5px;
             color: #fff;
         }
     }
 }
 
-.bref p{
-    text-align: center;
-    margin: 10px;
+.aboutMe {
+    background: #1A2530;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1px auto -1px auto;
+
+    p {
+        text-align: center;
+        margin: 10px;
+        max-width: 100%;
+        font-size: 1.3rem;
+        font-weight: lighter;
+        color: #fff;
+        margin: auto 10px auto 10px;
+    }
+
+    .textLike {
+        display: flex;
+        font-size: 2rem !important;
+        font-weight: bold;
+        text-align: center;
+        max-width: 100%;
+
+        p {
+            color: $color-orange;
+            margin: auto;
+        }
+    }
 }
+
+.bgAboutMe {
+    background: #1A2530;
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+    height: 200px;
+}
+
+.bgFooter {
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    height: 200px;
+    background: #1A2530;
+}
+
 /* 
 ==================================================
 ==================================================
@@ -376,39 +438,49 @@ h3 {
     text-align: center;
     width: 200px;
     max-width: 350px;
+    justify-content: center;
     margin: auto;
-    input, textarea {
+
+    input,
+    textarea {
         border: none;
-        background: #2E2E3A;
+        background: #1A2530;
         padding: 7px;
         color: #fff;
         border-radius: 5px;
-        margin: 0 0 5px 0;
+        margin: 0 0 10px 0;
         outline-style: none;
+
         &:focus {
-            border: 2px solid $color-red;
+            border: 2px solid $color-orange;
         }
     }
+
     .contact-bottom {
         display: flex;
         flex-direction: column;
-    }  
-}
-.cv {
-    @extend .button;
-        a {
-            color: #fff;
-            padding: 10px;
-            &:hover {
-                color: #fff;
-                text-decoration: none;
-            }
-        }
-         
-    &:hover {
-        background: $color-orange;
     }
 }
+
+.cv {
+    @extend .button;
+
+    i {
+        font-size: 1.8rem;
+        padding: 3px;
+    }
+
+    a {
+        color: #fff;
+        padding: 10px;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
 /* 
 ==================================================
 ==================================================
@@ -419,26 +491,26 @@ h3 {
 ==================================================
 */
 footer {
-    background: #2E2E3A;
+    background: #1A2530;
+    margin: -1px 0 0 0;
+
     ul li {
         display: inline-flex;
         flex-direction: row;
-        img {
-            width: 32px;
-        }
+
         a {
             color: #fff;
-            background: #A63446;
             padding: 5px;
             margin: 10px;
-            border-radius: 5px;
-            &:hover{
-                background: $color-orange;
-            }
+        }
+
+        i {
+            font-size: 2.5rem;
         }
     }
 }
-@media (min-width: 768px){
+
+@media (min-width: 768px) {
     .bg {
         background: url(../img/wallpaper-1280.jpg) no-repeat fixed;
         background-size: cover;
@@ -446,32 +518,44 @@ footer {
         -moz-background-size: cover;
         -o-background-size: cover;
     }
-    h2{
+
+    h2 {
         text-align: center;
-        &::after, &::before {
+
+        &::after,
+        &::before {
             width: 80%;
         }
     }
+
     .portfolio {
         flex-direction: row;
         width: 100%;
-        img, p {
+
+        img,
+        p {
             margin: 0 0 0 20px;
         }
-        .portfolio-link, .portfolio-techno {
+
+        .portfolio-link,
+        .portfolio-techno {
             flex-direction: row;
         }
-        p {
+
+        p {
             min-width: 300px;
             max-width: 500px;
         }
     }
+
     .contact {
         width: 800px;
         max-width: 800px;
         flex-direction: column;
+
         .contact-bottom {
             align-items: center;
+
             textarea {
                 width: 400px;
                 max-width: 400px;
@@ -480,8 +564,19 @@ footer {
             }
         }
     }
+
+    .aboutMe {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        p {
+            max-width: 500px;
+        }
+    }
 }
+
 @media (min-width:992px) {
+
     /* 
         ==================================================
         Manage media for large devices (tablet and computeur)
@@ -495,7 +590,9 @@ footer {
         -o-background-size: cover;
     }
 }
+
 @media (min-width:1700px) {
+
     /* 
         ==================================================
         Manage media for extra-large devices (tablet and computeur)
@@ -508,11 +605,13 @@ footer {
         -moz-background-size: cover;
         -o-background-size: cover;
     }
+
     .portfolio-link,
     .portfolio-techno {
         flex-direction: column;
     }
 }
+
 /* 
 ==================================================
 ==================================================

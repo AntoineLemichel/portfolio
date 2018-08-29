@@ -14,6 +14,6 @@ It's my portfolio
 ## Structure HTML
 - [X] Adding pictures into index
 - [X] Picture for all devices
-- [X] Adding my production, contact, about me
+- [ ] Adding my production, contact, about me
 
-## README is in progress working
+## My portfolio is in progress working
