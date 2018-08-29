@@ -8,6 +8,7 @@ It's my portfolio
 - [X] Make wireframe
 - [X] Structured html
 - [X] Semantics html correctly
+- [ ] Adding french and english translate
 
 
 ## My portfolio is in progress working
