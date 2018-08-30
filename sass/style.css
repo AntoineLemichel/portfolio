@@ -164,7 +164,7 @@ textarea {
 ==================================================
 ==================================================
 */
-.button, .cv {
+.button, .portfolio a, .cv {
   color: #fff !important;
   background: #E64B3B;
   padding: 5px;
@@ -174,7 +174,7 @@ textarea {
   max-width: 200px;
 }
 
-.button:hover, .cv:hover {
+.button:hover, .portfolio a:hover, .cv:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -193,7 +193,6 @@ html {
   padding: 0;
   margin: 0;
   height: 100%;
-  font-family: Roboto, sans-serif;
   color: #34495E !important;
 }
 
@@ -233,6 +232,10 @@ html strong {
   font-weight: bold;
 }
 
+.navbar-brand:hover {
+  color: #E64B3B;
+}
+
 .navbar {
   background: #1A2530;
 }
@@ -254,12 +257,15 @@ h1 {
 ==================================================
 ==================================================
 */
+h1,
+h2,
+h3 {
+  font-family: "Roboto Slab", serif !important;
+}
+
 h2 {
-  overflow: hidden;
   text-align: center;
   color: #E64B3B !important;
-  margin: 0 0 40px 0 !important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
   margin: 80px 0 80px 0 !important;
   padding: 80px 0 0 0;
 }
@@ -274,10 +280,6 @@ h2 {
   font-size: 2rem;
 }
 
-.flags img {
-  width: 32px;
-}
-
 .heading {
   width: 100%;
   position: absolute;
@@ -286,18 +288,23 @@ h2 {
 }
 
 .heading p {
-  color: #1A2530;
+  color: rgba(230, 75, 59, 0.6);
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .bg {
-  background: url(../img/wallpaper-640.jpg) no-repeat center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: #1A2530;
   height: 100%;
+  margin: 0 0 -1px 0;
+}
+
+.bgHeader {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  height: 200px;
+  background: #1A2530;
+  margin: 0 0 40px 0;
 }
 
 .return-top {
@@ -322,65 +329,47 @@ h2 {
 ==================================================
 ==================================================
 */
-.container-portfolio p {
-  margin: 20px;
-  text-align: center;
-}
-
-.container-portfolio span {
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-.container-portfolio .portfolio-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+.portfolio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  grid-gap: 60px;
+  margin: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 99%;
+  margin: 0 auto;
 }
 
-.container-portfolio .portfolio-link a {
-  margin: 5px;
-  padding: 3px;
-  width: 80px;
-  text-align: center;
-  border: 1px solid #E64B3B;
-  border-radius: 5px;
-  cursor: pointer;
+.portfolio img {
+  width: 100%;
+  margin: auto;
+}
+
+.portfolio h3 {
   color: #E64B3B;
+  font-size: 1.7rem;
+  margin: 40px 0 40px 0;
+  text-decoration: underline;
 }
 
-.container-portfolio .portfolio-link a:hover {
-  text-decoration: none;
+.portfolio div {
+  padding: 30px;
 }
 
-.container-portfolio .portfolio-techno {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.portfolio p {
+  margin: auto auto 50px auto;
+  max-width: 400px;
+  height: 50px;
 }
 
-.container-portfolio .portfolio-techno span {
-  margin: 5px;
-  padding: 3px;
-  width: 114px;
-  text-align: center;
-  background: #E64B3B;
-  border-radius: 5px;
-  color: #fff;
+.portfolio a {
+  background: #1A2530;
+  font-size: 1.2rem;
+  text-align: right;
+  padding: 8px !important;
 }
 
 .aboutMe {
@@ -408,7 +397,7 @@ h2 {
   font-size: 1.3rem;
   font-weight: lighter;
   color: #fff;
-  margin: auto 10px auto 10px;
+  margin: auto 10px 50px 10px;
 }
 
 .aboutMe .textLike {
@@ -419,28 +408,26 @@ h2 {
   font-weight: bold;
   text-align: center;
   max-width: 100%;
-  text-align: center;
   margin: auto;
 }
 
 .aboutMe .textLike p {
   color: #E64B3B;
-  margin: auto;
-  width: 100%;
 }
 
 .bgAboutMe {
   background: #1A2530;
   -webkit-clip-path: polygon(100% 0, 100% 100%, 0 0);
-          clip-path: polygon(100% 0, 100% 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
   height: 200px;
 }
 
 .bgFooter {
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
-          clip-path: polygon(0 0, 0 100%, 100% 100%);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
   height: 200px;
   background: #1A2530;
+  margin: 50px 0 0 0;
 }
 
 /* 
@@ -507,7 +494,7 @@ h2 {
 
 .cv {
   margin: 40px auto auto auto;
-  font-size: 1.1rem;
+  font-size: 0.7rem;
 }
 
 .cv i {
@@ -563,40 +550,16 @@ footer ul li i {
   .active {
     border-bottom: 1px solid #E64B3B;
   }
-  .bg {
-    background: url(../img/wallpaper-1280.jpg) no-repeat fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  }
-  h2 {
-    text-align: center;
-  }
-  h2::after, h2::before {
-    width: 80%;
-  }
   .portfolio {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
   }
-  .portfolio img,
-  .portfolio p {
-    margin: 0 0 0 20px;
+  .portfolio span a:hover {
+    background: #E64B3B;
   }
-  .portfolio .portfolio-link,
-  .portfolio .portfolio-techno {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .portfolio p {
-    min-width: 300px;
-    max-width: 500px;
+  img {
+    width: 400px !important;
+    height: 200px !important;
   }
   .contact {
     width: 800px;
@@ -612,10 +575,12 @@ footer ul li i {
   }
   .contact .contact-bottom input,
   .contact .contact-bottom textarea {
-    width: 300px;
     max-width: 400px;
     margin: 0 0 10px 0;
     padding: 10px 5px 10px 5px;
+  }
+  .contact input[type="submit"]:hover {
+    color: #E64B3B;
   }
   .aboutMe {
     display: -ms-grid;
@@ -627,9 +592,11 @@ footer ul li i {
     max-width: 500px;
   }
   .aboutMe .textLike {
-    max-width: 150px;
+    max-width: 400px;
     height: 100px;
-    margin: auto;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 
@@ -639,13 +606,6 @@ footer ul li i {
         Manage media for large devices (tablet and computeur)
         ==================================================
     */
-  .bg {
-    background: url(../img/wallpaper-1920.jpg) no-repeat fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  }
 }
 
 @media (min-width: 1700px) {
@@ -654,20 +614,6 @@ footer ul li i {
         Manage media for extra-large devices (tablet and computeur)
         ==================================================
     */
-  .bg {
-    background: url(../img/wallpaper-4032.jpg) no-repeat fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  }
-  .portfolio-link,
-  .portfolio-techno {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 /* 
