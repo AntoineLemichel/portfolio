@@ -176,6 +176,8 @@ textarea {
 ==================================================
 */
 $color-orange: #E64B3B;
+$font-roboto : 'Roboto Slab',
+serif !important;
 
 .button {
     color: #fff !important;
@@ -206,7 +208,6 @@ html {
     padding: 0;
     margin: 0;
     height: 100%;
-    font-family: Roboto, sans-serif;
     color: #34495E !important;
 
     ul {
@@ -240,6 +241,10 @@ html {
     }
 }
 
+.navbar-brand:hover {
+    color: $color-orange;
+}
+
 .navbar {
     background: #1A2530;
 
@@ -261,12 +266,15 @@ h1 {
 ==================================================
 ==================================================
 */
+h1,
+h2,
+h3 {
+    font-family: $font-roboto;
+}
+
 h2 {
-    overflow: hidden;
     text-align: center;
     color: $color-orange !important;
-    margin: 0 0 40px 0 !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     margin: 80px 0 80px 0 !important;
     padding: 80px 0 0 0;
 }
@@ -281,12 +289,6 @@ h2 {
     font-size: 2rem;
 }
 
-.flags {
-    img {
-        width: 32px;
-    }
-}
-
 .heading {
     width: 100%;
     position: absolute;
@@ -294,19 +296,29 @@ h2 {
     text-align: center;
 
     p {
-        color: #1A2530;
+        color: rgba(230, 75, 59, 0.6);
         font-weight: bold;
         font-size: 1.5rem;
     }
 }
 
 .bg {
-    background: url(../img/wallpaper-640.jpg) no-repeat center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    //    background: url(../img/wallpaper-640.jpg) no-repeat center;
+    //    background-size: cover;
+    //    -webkit-background-size: cover;
+    //    -moz-background-size: cover;
+    //    -o-background-size: cover;
+    background: #1A2530;
     height: 100%;
+    margin: 0 0 -1px 0;
+}
+
+.bgHeader {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    height: 200px;
+    background: #1A2530;
+    margin: 0 0 40px 0;
 }
 
 .return-top {
@@ -331,52 +343,43 @@ h2 {
 ==================================================
 ==================================================
 */
-.container-portfolio {
+.portfolio {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 60px;
+    margin: auto;
+    justify-content: center;
+    width: 99%;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        margin: auto;
+    }
+
+    h3 {
+        color: $color-orange;
+        font-size: 1.7rem;
+        margin: 40px 0 40px 0;
+        text-decoration: underline;
+    }
+
+    div {
+        padding: 30px;
+    }
+
     p {
-        margin: 20px;
-        text-align: center;
+        margin: auto auto 50px auto;
+        max-width: 400px;
+        height: 50px;
     }
 
-    span {
-        font-size: 0.8rem;
-        text-align: center;
-    }
-
-    .portfolio-link {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-
-        a {
-            margin: 5px;
-            padding: 3px;
-            width: 80px;
-            text-align: center;
-            border: 1px solid $color-orange;
-            border-radius: 5px;
-            cursor: pointer;
-            color: $color-orange;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-
-    .portfolio-techno {
-        display: inline-flex;
-        flex-flow: row wrap;
-        justify-content: center;
-
-        span {
-            margin: 5px;
-            padding: 3px;
-            width: 114px;
-            text-align: center;
-            background: $color-orange;
-            border-radius: 5px;
-            color: #fff;
-        }
+    a {
+        @extend .button;
+        background: #1A2530;
+        font-size: 1.2rem;
+        text-align: right;
+        padding: 8px !important;
     }
 }
 
@@ -401,7 +404,7 @@ h2 {
         font-size: 1.3rem;
         font-weight: lighter;
         color: #fff;
-        margin: auto 10px auto 10px;
+        margin: auto 10px 50px 10px;
     }
 
     .textLike {
@@ -410,27 +413,27 @@ h2 {
         font-weight: bold;
         text-align: center;
         max-width: 100%;
-        text-align: center;
         margin: auto;
 
         p {
             color: $color-orange;
-            margin: auto;
-            width: 100%;
         }
     }
 }
 
 .bgAboutMe {
     background: #1A2530;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 0);
     clip-path: polygon(100% 0, 100% 100%, 0 0);
     height: 200px;
 }
 
 .bgFooter {
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
     clip-path: polygon(0 0, 0 100%, 100% 100%);
     height: 200px;
     background: #1A2530;
+    margin: 50px 0 0 0;
 }
 
 /* 
@@ -485,7 +488,7 @@ h2 {
 .cv {
     @extend .button;
     margin: 40px auto auto auto;
-    font-size: 1.1rem;
+    font-size: 0.7rem;
 
     i {
         font-size: 1.8rem;
@@ -536,41 +539,25 @@ footer {
     .active {
         border-bottom: 1px solid $color-orange;
     }
-    .bg {
-        background: url(../img/wallpaper-1280.jpg) no-repeat fixed;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-    }
 
-    h2 {
-        text-align: center;
-
-        &::after,
-        &::before {
-            width: 80%;
-        }
-    }
-
+    //    .bg {
+    //        background: url(../img/wallpaper-1280.jpg) no-repeat fixed;
+    //        background-size: cover;
+    //        -webkit-background-size: cover;
+    //        -moz-background-size: cover;
+    //        -o-background-size: cover;
+    //    }
     .portfolio {
-        flex-direction: row;
-        width: 100%;
+        grid-template-columns: auto auto;
 
-        img,
-        p {
-            margin: 0 0 0 20px;
+        span a:hover {
+            background: $color-orange;
         }
+    }
 
-        .portfolio-link,
-        .portfolio-techno {
-            flex-direction: row;
-        }
-
-        p {
-            min-width: 300px;
-            max-width: 500px;
-        }
+    img {
+        width: 400px !important;
+        height: 200px !important;
     }
 
     .contact {
@@ -582,11 +569,14 @@ footer {
 
             input,
             textarea {
-                width: 300px;
                 max-width: 400px;
                 margin: 0 0 10px 0;
                 padding: 10px 5px 10px 5px;
             }
+        }
+
+        input[type="submit"]:hover {
+            color: $color-orange;
         }
     }
 
@@ -599,48 +589,42 @@ footer {
         }
 
         .textLike {
-            max-width: 150px;
+            max-width: 400px;
             height: 100px;
-            margin: auto;
+            grid-column-start: 1;
+            grid-column-end: 3;
         }
     }
 }
 
 @media (min-width:992px) {
-
     /* 
         ==================================================
         Manage media for large devices (tablet and computeur)
         ==================================================
     */
-    .bg {
-        background: url(../img/wallpaper-1920.jpg) no-repeat fixed;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-    }
+    //    .bg {
+    //        background: url(../img/wallpaper-1920.jpg) no-repeat fixed;
+    //        background-size: cover;
+    //        -webkit-background-size: cover;
+    //        -moz-background-size: cover;
+    //        -o-background-size: cover;
+    //    }
 }
 
 @media (min-width:1700px) {
-
     /* 
         ==================================================
         Manage media for extra-large devices (tablet and computeur)
         ==================================================
     */
-    .bg {
-        background: url(../img/wallpaper-4032.jpg) no-repeat fixed;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-    }
-
-    .portfolio-link,
-    .portfolio-techno {
-        flex-direction: column;
-    }
+    //    .bg {
+    //        background: url(../img/wallpaper-4032.jpg) no-repeat fixed;
+    //        background-size: cover;
+    //        -webkit-background-size: cover;
+    //        -moz-background-size: cover;
+    //        -o-background-size: cover;
+    //    }
 }
 
 /* 
