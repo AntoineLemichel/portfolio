@@ -187,6 +187,7 @@ serif !important;
     font-size: .7rem;
     margin: auto auto 75px auto;
     max-width: 200px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
 
     &:hover {
         color: #fff;
@@ -303,11 +304,6 @@ h2 {
 }
 
 .bg {
-    //    background: url(../img/wallpaper-640.jpg) no-repeat center;
-    //    background-size: cover;
-    //    -webkit-background-size: cover;
-    //    -moz-background-size: cover;
-    //    -o-background-size: cover;
     background: #1A2530;
     height: 100%;
     margin: 0 0 -1px 0;
@@ -361,7 +357,6 @@ h2 {
         color: $color-orange;
         font-size: 1.7rem;
         margin: 40px 0 40px 0;
-        text-decoration: underline;
     }
 
     div {
@@ -381,11 +376,16 @@ h2 {
         text-align: right;
         padding: 8px !important;
     }
+
+    .cards {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+        border-radius: .6em;
+    }
 }
 
 .aboutMe {
     background: #1A2530;
-    height: 70vh;
+    height: 75vh;
     display: flex;
     flex-wrap: wrap;
     margin: -1px auto -1px auto;
@@ -446,8 +446,8 @@ h2 {
 ==================================================
 */
 .contact {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: auto;
     text-align: center;
     width: 200px;
     max-width: 350px;
@@ -470,6 +470,10 @@ h2 {
             border: 2px solid $color-orange;
         }
     }
+    input[type="submit"]{
+        margin: 30px auto !important;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+    }
 
     textarea {
         height: 80px;
@@ -488,7 +492,7 @@ h2 {
 .cv {
     @extend .button;
     margin: 40px auto auto auto;
-    font-size: 0.7rem;
+    font-size: 1.1rem;
 
     i {
         font-size: 1.8rem;
@@ -535,18 +539,11 @@ footer {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1068px) {
     .active {
         border-bottom: 1px solid $color-orange;
     }
 
-    //    .bg {
-    //        background: url(../img/wallpaper-1280.jpg) no-repeat fixed;
-    //        background-size: cover;
-    //        -webkit-background-size: cover;
-    //        -moz-background-size: cover;
-    //        -o-background-size: cover;
-    //    }
     .portfolio {
         grid-template-columns: auto auto;
 
@@ -558,26 +555,6 @@ footer {
     img {
         width: 400px !important;
         height: 200px !important;
-    }
-
-    .contact {
-        width: 800px;
-        flex-direction: column;
-
-        .contact-bottom {
-            align-items: center;
-
-            input,
-            textarea {
-                max-width: 400px;
-                margin: 0 0 10px 0;
-                padding: 10px 5px 10px 5px;
-            }
-        }
-
-        input[type="submit"]:hover {
-            color: $color-orange;
-        }
     }
 
     .aboutMe {
@@ -595,6 +572,30 @@ footer {
             grid-column-end: 3;
         }
     }
+
+    .contact {
+        width: 800px;
+
+        .contact-bottom {
+            align-items: center;
+
+            input,
+            textarea {
+                max-width: 400px;
+                margin: 0 0 10px 0;
+                padding: 10px 5px 10px 5px;
+            }
+        }
+
+        input[type="submit"]:hover {
+            background: $color-orange;
+        }
+    }
+
+
+    .cv {
+        font-size: 0.7rem;
+    }
 }
 
 @media (min-width:992px) {
@@ -603,13 +604,7 @@ footer {
         Manage media for large devices (tablet and computeur)
         ==================================================
     */
-    //    .bg {
-    //        background: url(../img/wallpaper-1920.jpg) no-repeat fixed;
-    //        background-size: cover;
-    //        -webkit-background-size: cover;
-    //        -moz-background-size: cover;
-    //        -o-background-size: cover;
-    //    }
+
 }
 
 @media (min-width:1700px) {
@@ -618,13 +613,6 @@ footer {
         Manage media for extra-large devices (tablet and computeur)
         ==================================================
     */
-    //    .bg {
-    //        background: url(../img/wallpaper-4032.jpg) no-repeat fixed;
-    //        background-size: cover;
-    //        -webkit-background-size: cover;
-    //        -moz-background-size: cover;
-    //        -o-background-size: cover;
-    //    }
 }
 
 /* 
